@@ -1,0 +1,245 @@
+# Actions ของตาราง รับงานคืนได้เงิน200
+
+รวม **9 actions**
+
+## Compose Email (Email พนักงาน)
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | EMAIL |
+| การแสดงผล | Display_Inline |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | No |
+| ต้องยืนยัน | No |
+| ผูกกับคอลัมน์ | Email พนักงาน |
+| ตั้งค่าคอลัมน์ | Email พนักงาน |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+NOT(ISBLANK([Email พนักงาน]))
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"EmailTo":"[Email พนักงาน]","Subject":null,"Body":null,"Prominence":"Display_Inline","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":false,"BulkApplicable":false}
+```
+
+</details>
+
+## Add
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | ADD_RECORD |
+| การแสดงผล | Display_Overlay |
+| ลำดับ | 1 |
+| Bulk action | Yes |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | No |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"Prominence":"Display_Overlay","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":true}
+```
+
+</details>
+
+## Delete
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | DELETE_RECORD |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | Yes |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | Yes |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ADVANCED |
+| ไอคอน |  |
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"InputParametersUsed":null,"Prominence":"Display_Prominently","NeedsConfirmation":true,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":true}
+```
+
+</details>
+
+## Edit
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | EDIT_RECORD |
+| การแสดงผล | Display_Overlay |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | No |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"DesktopBehavior":"Open a form","DesktopEditBehavior":"Edit inplace","Prominence":"Display_Overlay","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":false}
+```
+
+</details>
+
+## View Map (Lat / Long)
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | NAVIGATE_APP |
+| การแสดงผล | Display_Inline |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | No |
+| ต้องยืนยัน | No |
+| ผูกกับคอลัมน์ | Lat / Long |
+| ตั้งค่าคอลัมน์ | Lat / Long |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+NOT(ISBLANK([Lat / Long]))
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"NavigateTarget":"CONCATENATE(\"#page=map&table=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99200&mapcolumn=Lat%20%2F%20Long&row=\", ENCODEURL([_THISROW]))","Prominence":"Display_Inline","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":false,"BulkApplicable":false}
+```
+
+</details>
+
+## Chart Data for รับงานคืนได้เงิน200
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | NAVIGATE_APP |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | No |
+| ต้องยืนยัน | No |
+| ปิด sync อัตโนมัติ | No Display name Data |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+=CONTEXT("View") = "รับงานคืนได้เงิน200"
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"NavigateTarget":"=\"#page=fastTable&table=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99200\"","Prominence":"Display_Prominently","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":false,"BulkApplicable":false}
+```
+
+</details>
+
+## ส่งรูปจุดที่ส่งงาน
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | NAVIGATE_DIFFERENT_APP |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | No Confirmation Message กดส่งรูปจุดที่ส่งงาน เพื่อเข้าสู่ขั้นตอนการเพื่มรูปถ่าย |
+| แก้ไขข้อมูล | No |
+| ต้องยืนยัน | Yes |
+| ผูกกับคอลัมน์ | สถานะการเข้ารับสินค้า |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+true
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"NavigateTarget":"=LINKTOAPP(\"1c544f2c-efb8-41ee-8cc5-ac5573f10e5c\") \n& LINKTOROW([ID_รับงานคืนได้เงิน200], \"รับงานคืนได้ เงิน200_Detail\")","Prominence":"Display_Prominently","NeedsConfirmation":true,"ConfirmationMessage":"กดส่งรูปจุดที่ส่งงาน เพื่อเข้าสู่ขั้นตอนการเพื่มรูป ถ่าย","ModifiesData":false,"BulkApplicable":false}
+```
+
+</details>
+
+## รับงานคืนได้เงิน200csv
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | EXPORT_VIEW |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | No |
+| ต้องยืนยัน | No |
+| ปิด sync อัตโนมัติ | No Display name โหลดไฟล์csv |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+true
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"CsvLocale":"en-GB","Prominence":"Display_Prominently","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":false,"BulkApplicable":false}
+```
+
+</details>
+
+## View Ref (ID_พนักงาน)
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | NAVIGATE_APP |
+| การแสดงผล | Display_Inline |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | No |
+| ต้องยืนยัน | No |
+| ผูกกับคอลัมน์ | ID_พนักงาน |
+| ตั้งค่าคอลัมน์ | ID_พนักงาน |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+NOT(ISBLANK([ID_พนักงาน]))
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"NavigateTarget":"CONCATENATE(\"#page=detail&table=%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%9E%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99&row=\", ENCODEURL([ID_พนักงาน]) )","Prominence":"Display_Inline","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":false,"BulkApplicable":false}
+```
+
+</details>
+

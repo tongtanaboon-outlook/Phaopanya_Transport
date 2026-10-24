@@ -1,0 +1,170 @@
+# Actions ของตาราง FILTER
+
+รวม **6 actions**
+
+## Delete
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | DELETE_RECORD |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | Yes |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | Yes |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ADVANCED |
+| ไอคอน |  |
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"InputParametersUsed":null,"Prominence":"Display_Prominently","NeedsConfirmation":true,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":true}
+```
+
+</details>
+
+## Edit
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | EDIT_RECORD |
+| การแสดงผล | Display_Overlay |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | No |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"DesktopBehavior":"Open a form","DesktopEditBehavior":"Edit inplace","Prominence":"Display_Overlay","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":false}
+```
+
+</details>
+
+## Add
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | ADD_RECORD |
+| การแสดงผล | Display_Overlay |
+| ลำดับ | 1 |
+| Bulk action | Yes |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | No |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"Prominence":"Display_Overlay","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":true}
+```
+
+</details>
+
+## cLeAR_รับคืน
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | SET_COLUMN_VALUE |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | Yes |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | No |
+| ผูกกับคอลัมน์ | STARTDATE |
+| ตั้งค่าคอลัมน์ | STARTDATE |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+true
+```
+
+**ตั้งค่าเป็น:**
+
+```
+=""
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"Assignments": [{"ColumnToEdit":"STARTDATE","NewColumnValue":"=\"\""}, {"ColumnToEdit":"ENDDATE","NewColumnValue":"=\"\""}, {"ColumnToEdit":"EXPORT TO PDF","NewColumnValue":"=\"\""}],"ColumnToEdit":"STARTDATE","NewColumnValue":"=\"\"","InputParametersUsed":null,"Prominence":"Display_Prominently","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":true}
+```
+
+</details>
+
+## เคลียสรุปจุดส่ง Action - 1
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | SET_COLUMN_VALUE |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | Yes |
+| แก้ไขข้อมูล | Yes |
+| ต้องยืนยัน | No |
+| ผูกกับคอลัมน์ | EXPORT TO Excel(สรุปจำนวนจุดส่งงาน) |
+| ตั้งค่าคอลัมน์ | EXPORT TO Excel(สรุปจำนวนจุดส่งงาน) |
+| ปิด sync อัตโนมัติ | No |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+true
+```
+
+**ตั้งค่าเป็น:**
+
+```
+=""
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"Assignments":[{"ColumnToEdit":"EXPORT TO Excel(สรุปจำนวนจุดส่งงาน)","NewColumnValue":"=\"\""}],"ColumnToEdit":"EXPORTTO Excel(สรุปจำนวนจุดส่ง งาน)","NewColumnValue":"=\"\"","InputParametersUsed":null,"Prominence":"Display_Prominently","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":true,"BulkApplicable":true}
+```
+
+</details>
+
+## FILTERcsv
+
+| คุณสมบัติ | ค่า |
+|---|---|
+| ประเภทการทำงาน (Do this) | EXPORT_VIEW |
+| การแสดงผล | Display_Prominently |
+| ลำดับ | 1 |
+| Bulk action | No |
+| แก้ไขข้อมูล | No |
+| ต้องยืนยัน | No |
+| ปิด sync อัตโนมัติ | No Display name โหลดไฟล์csv |
+| การมองเห็น | ALWAYS |
+| ไอคอน |  |
+
+**แสดงเมื่อเงื่อนไขนี้เป็นจริง:**
+
+```
+true
+```
+
+<details><summary>With these properties (JSON)</summary>
+
+```json
+{"CsvLocale":"en-GB","Prominence":"Display_Prominently","NeedsConfirmation":false,"ConfirmationMessage":"","ModifiesData":false,"BulkApplicable":false}
+```
+
+</details>
+
